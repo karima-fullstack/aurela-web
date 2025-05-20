@@ -1,2 +1,11 @@
-package web.aurela.aurelaweb.Exceptions;public class OperationNotPermittedException {
+package web.aurela.aurelaweb.Exceptions;
+
+public class OperationNotPermittedException extends RuntimeException {
+
+    public OperationNotPermittedException() {
+    }
+
+    public OperationNotPermittedException(String message) {
+        super(message);
+    }
 }

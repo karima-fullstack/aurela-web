@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Activate Your Account - AURELA</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f6f6f6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #111;
+        }
+
+        .logo span {
+            color: #f9a8d4; /* Tailwind's pink-300 */
+            font-size: 32px;
+        }
+
+        h1 {
+            font-size: 22px;
+            color: #111;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        .activation-code {
+            font-size: 30px;
+            font-weight: bold;
+            color: #1f2937;
+            text-align: center;
+            margin: 20px 0;
+            padding: 14px 0;
+            background-color: #fdf2f8;
+            border: 1px dashed #f9a8d4;
+            border-radius: 8px;
+        }
+
+        .activation-link {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .activation-link a {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #f9a8d4;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+
+        .activation-link a:hover {
+            background-color: #f472b6; /* Tailwind's pink-400 */
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            text-align: center;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="logo">
+        AURELA<span>.</span>
+    </div>
+
+    <h1>Activate Your Account</h1>
+    <p>Hi <span th:text="${username}">[Username]</span>,</p>
+    <p>Thank you for joining AURELA! To get started, please use the activation code below:</p>
+
+    <div class="activation-code">
+        <span th:text="${activation_code}">[Activation Code]</span>
+    </div>
+
+    <p>If you didn’t register for this account, you can safely ignore this email.</p>
+
+    <div class="footer">
+        &copy; 2025 AURELA. All rights reserved.
+    </div>
+</div>
+</body>
+</html>

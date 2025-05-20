@@ -1,22 +1,122 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Order Confirmation</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Order Confirmation - AURELA</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fefefe;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #111;
+        }
+
+        .logo span {
+            color: #f9a8d4;
+            font-size: 32px;
+        }
+
+        h2 {
+            font-size: 22px;
+            color: #111;
+        }
+
+        h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1f2937;
+            background-color: #fdf2f8;
+            padding: 12px;
+            border: 1px dashed #f9a8d4;
+            border-radius: 8px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 12px 0;
+        }
+
+        strong {
+            color: #111;
+        }
+
+        hr {
+            margin: 30px 0;
+            border: none;
+            border-top: 1px solid #eee;
+        }
+
+        h4 {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #444;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            text-align: center;
+            color: #888;
+        }
+    </style>
 </head>
 <body>
-<h2>Hi <span th:text="${firstName}">Customer</span>,</h2>
+<div class="container">
+    <div class="logo">
+        AURELA<span>.</span>
+    </div>
 
-<p>Thank you for your order! Your tracking number is:</p>
-<h3 th:text="${trackingNumber}">TRACKING_NUMBER</h3>
+    <h2>Hi <span th:text="${firstName}">Fragrance Lover</span>,</h2>
 
-<p><strong>Order Total:</strong> $<span th:text="${totalAmount}">0.00</span></p>
+    <p>
+        Thank you for choosing <strong>AURELA</strong>, where every scent tells a story. Your order has been received and is being lovingly prepared to bring elegance and charm right to your doorstep.
+    </p>
 
-<p>We'll send you another update when your order ships.</p>
+    <p>Your tracking number is:</p>
+    <h3 th:text="${trackingNumber}">TRACKING_NUMBER</h3>
 
-<hr>
-<h4>Shipping Info:</h4>
-<p th:text="${fullAddress}">123 Main St, City, State, ZIP, Country</p>
+    <p>
+        <strong>Order Total:</strong> $<span th:text="${totalAmount}">0.00</span>
+    </p>
 
-<p>Thank you for shopping with us!</p>
+    <p>
+        Soon, your selected fragrances will be on their way — ready to become part of your personal expression and aura.
+    </p>
+
+    <hr />
+
+    <h4>Shipping To:</h4>
+    <p th:text="${fullAddress}">123 Main St, City, State, ZIP, Country</p>
+
+    <p>
+        We’ll notify you again once your parcel departs. Until then, thank you for being part of the AURELA experience — where scent meets sophistication.
+    </p>
+
+    <div class="footer">
+        &copy; 2025 AURELA. Let your essence bloom.
+    </div>
+</div>
 </body>
 </html>
