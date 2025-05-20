@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Order Confirmation</title>
+</head>
+<body>
+<h2>Hi <span th:text="${firstName}">Customer</span>,</h2>
+
+<p>Thank you for your order! Your tracking number is:</p>
+<h3 th:text="${trackingNumber}">TRACKING_NUMBER</h3>
+
+<p><strong>Order Total:</strong> $<span th:text="${totalAmount}">0.00</span></p>
+
+<p>We'll send you another update when your order ships.</p>
+
+<hr>
+<h4>Shipping Info:</h4>
+<p th:text="${fullAddress}">123 Main St, City, State, ZIP, Country</p>
+
+<p>Thank you for shopping with us!</p>
+</body>
+</html>
