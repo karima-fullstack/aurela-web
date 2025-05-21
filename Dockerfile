@@ -1,13 +1,17 @@
-FROM openjdk:17-jdk-slim
+# Use lightweight JDK base image
+FROM eclipse-temurin:21-jdk-alpine
 
+# Set working directory inside container
 WORKDIR /app
 
-COPY . .
+# Copy the entire project into the container
+COPY . ./
 
+# Ensure Maven wrapper is executable
 RUN chmod +x mvnw
 
-RUN ./mvnw clean package -DskipTests
+# Build the application
+RUN ./mvnw -B -DskipTests clean package
 
-ENV SPRING_PROFILES_ACTIVE=prod
-
-CMD ["java", "-jar", "target/Aurela-web-0.0.1-SNAPSHOT.jar"]
+# Run the application
+CMD ["sh", "-c", "java -jar target/*.jar"]
